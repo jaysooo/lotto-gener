@@ -1,34 +1,46 @@
 <template>
-  <div>
-    <Header />
+  <div class="lottogene-top">
+    <Header/>
   </div>
-  <div>
-    <lotto_body />
+  <div class="lottogene-middle">
+    <Container/>
   </div>
-  
-  참고 :   <a href="https://jssvs.tistory.com/">데이터 엔지니어 기술 블로그</a>
+  <div class="lottogene-bottom">
+    <Footer/>
+  </div>
+
 </template>
 
 <script>
+import '@/assets/style.css'
+import Container from '@/components/layout/Container.vue'
 import Header from '@/components/layout/Header.vue'
-import lotto_body from '@/components/layout/Body.vue'
+import Footer from './components/layout/Footer.vue'
+
 export default {
+  name: "app",
   components : {
+    Container,
     Header,
-    lotto_body,
+    Footer
   }
 }
-
 
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.lottogene-top {
+    background-color: blanchedalmond;
+    height: 10%;
+}
+.lottogene-middle  {
+    background-color: blanchedalmond;
+    height: 50vw;
+}
+
+
+.lottogene-bottom  {
+    background-color: blanchedalmond;
+    height: 10vw;
 }
 </style>
